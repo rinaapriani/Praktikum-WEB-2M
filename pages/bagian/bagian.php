@@ -6,7 +6,7 @@
                         <h3>Bagian</h3>
                     </div>
                     <div class="col">
-                        <a href="#" class="btn btn-success float-end">
+                        <a href="?page=bagiantambah" class="btn btn-success float-end">
                             <i class="fa fa-plus-circle"></i>
                             Tambah
                         </a>
@@ -55,11 +55,13 @@
                                             <?php echo $row["nama"] ?>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary">
+                                            <a href="?page=bagianubah&id=<?php echo $row["id"] ?>" class="btn btn-primary">
                                                 <i class="fa fa-edit"></i>
                                                 Ubah
                                             </a>
-                                            <a href="#" class="btn btn-danger">
+                                            <a href="?page=bagianhapus&id=<?php echo $row["id"] ?>" 
+                                            onclick="javascript: return confirm('Konfirmasi data akan dihapus?');" 
+                                            class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
                                                 Hapus
                                             </a>
