@@ -46,23 +46,16 @@
                 $checkResult = mysqli_query($connection, $checkSQL);
                 if (mysqli_num_rows($checkResult) == 0) {
                 ?>
-                    <div class=" alert alert-danger" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         <i class="fa fa-exclamation-circle"></i>
                         Data dengan tahun dan bulan tersebut masih kosong
                     </div>
             <?php
-                } else {
-                    echo "Ke Halaman Penggajian";
-                }
             } else {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                        <i class="fa fa-exclamation-circle"></i>
-                        Ketika memilih bulan maka harus memilih tahun
-                </div>
-            <?php
+                echo "<meta http-equiv='refresh' content='0; url=?page=penggajian&bulan=$bulan_select&tahun=$tahun_select'>";
             }
         }
+    }
         ?>
     </div>
 </div>
@@ -111,4 +104,3 @@
             </div>
         </form>
     </div>
-</div>
